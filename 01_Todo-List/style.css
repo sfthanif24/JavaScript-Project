@@ -1,0 +1,113 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #0f388a, #94255c);
+    padding: 10px;
+}
+
+.todo-app{
+    width: 100%;
+    max-width: 550px;
+    background-color: white;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+}
+.todo-app img{
+    height: 50px;
+    width: 60px;
+    padding-right: 10px;
+}
+
+.todo-app h2{
+    color: #09224b;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+#input-box{
+    height: 70px;
+    width: 450px;
+    border: none;
+    background-color: rgb(224, 224, 224);
+    border-radius: 40px;
+    outline: none;
+    padding: 15px;
+    font-size: 20px;
+}
+
+.add-btn{
+    border: none;
+    outline: none;
+    background-color: rgb(27, 199, 252);
+    height: 70px;
+    width: 150px;
+    border-radius: 40px;
+    margin-left: -100px;
+    font-size: 21px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+ul li{
+    position: relative;
+    list-style: none;
+    font-size: 18px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+ul li::before{
+    content: "";
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url(images/unchecked.png);
+    background-size: cover;
+    background-position: center;
+    top: 10px;
+    left: 8px;
+}
+
+ul li.checked{
+    color: #555;
+    text-decoration: line-through;
+}
+
+ul li.checked::before{
+    background-image: url(images/checked.png);
+}
+
+ul li span{
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 25px;
+    line-height: 40px;
+    text-align: center;
+    color: #555;
+    border-radius: 50%;
+}
+
+ul li span:hover{
+    background-color: #edeef0;
+}
